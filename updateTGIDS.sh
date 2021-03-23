@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+sleep $[ ( $RANDOM % 600 )  + 1 ]s
 
 cd /opt/HBMonv2
 FILE_NAME="talkgroup_ids.json"
@@ -7,9 +9,6 @@ FETCH_URL="http://downloads.freedmr.uk/downloads/talkgroup_ids.json"
 OLD_MD5=`md5sum ${FILE_NAME}`
 wget -O ${FILE_NAME} ${FETCH_URL}
 NEW_MD5=`md5sum ${FILE_NAME}`
-
-#echo "OLD: ${OLD_MD5}\n"
-#echo "NEW: ${NEW_MD5}\n"
 
 if [ "$NEW_MD5" != "$OLD_MD5" ]
 then
