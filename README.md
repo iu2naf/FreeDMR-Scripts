@@ -1,6 +1,6 @@
 # FreeDMR-Scripts
-Scripts for use with HBMonv2 on FreeDMR (by K6JWN)
-==================================================
+Scripts for use with HBMonv2 on FreeDMR
+=======================================
 
 About
 =====
