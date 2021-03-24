@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sleep $[ ( $RANDOM % 600 )  + 1 ]s
+sleep $[ ( $RANDOM % 1800 )  + 1 ]s
 
 cd /opt/HBMonv2
 FILE_NAME="talkgroup_ids.json"
