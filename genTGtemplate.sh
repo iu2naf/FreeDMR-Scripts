@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep $[ ( $RANDOM % 600 )  + 1 ]s
+
 FILE_NAME="/tmp/talkgroups.csv"
 FILE_URL="http://downloads.freedmr.uk/downloads/Talkgroups_FreeDMR.csv"
 
