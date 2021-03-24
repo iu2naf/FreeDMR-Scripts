@@ -1,0 +1,2 @@
+15 3 * * * /opt/HBMonv2/updateTGIDS.sh
+45 3 * * * /opt/HBMonv2/genTGtemplate.sh
