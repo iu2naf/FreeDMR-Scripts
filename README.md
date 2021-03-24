@@ -28,9 +28,9 @@ Features
 ========
 
 
-Cronjob for updating DMR IDs
+Cronjob for updating talkgroups
 ============================
-You can use the included script to update the DMR IDs periodically. Copy the files updateDMRIDs to /etc/cron.d/ and updateDMRIDs.sh to /var/www from the cron folder in this repo. The paths may have to be aligned to your system architecture. The Update script will then be executed once every 24 hours at 3:30. For security considerations please make sure that the cron folder is not copied to your web server's www root directory.
+You can use the included file as a template for setting your update times.  These are suggested and you should not set them to update more than once or twice per day.
 
 Contact
 =======
