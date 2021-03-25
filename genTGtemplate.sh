@@ -59,6 +59,7 @@ while IFS=$'\t' read -r -a fields; do
 	tgn="${fields[2]}"
 	tgname="${tgn%\\n}"
 
+        # To display ALL talkgroups, remove the next 2 lines
 	if [[ "$country" =~ ^World ]] || [[ "$country" =~ ^USA ]]
 	then     
            if [[ "$tgid" != "" ]]
@@ -72,6 +73,7 @@ while IFS=$'\t' read -r -a fields; do
 	      </tr>
 EOF
            fi
+        # To display ALL talkgroups, remove the next line
 	fi
 done < ${FILE_NAME}
 
