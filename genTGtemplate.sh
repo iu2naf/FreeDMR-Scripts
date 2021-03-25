@@ -60,7 +60,7 @@ while IFS=$'\t' read -r -a fields; do
 	tgname="${tgn%\\n}"
 
         # To display ALL talkgroups, remove the next 2 lines
-	if [[ "$country" =~ ^World ]] || [[ "$country" =~ ^USA ]]
+	if [[ "$country" =~ ^World ]]
 	then     
            if [[ "$tgid" != "" ]]
            then
