@@ -59,16 +59,19 @@ while IFS=$'\t' read -r -a fields; do
 	tgn="${fields[2]}"
 	tgname="${tgn%\\n}"
 
-	if [[ "${fields[0]}" =~ ^World ]] || [[ "${fields[0]}" =~ ^USA ]]
+	if [[ "$country" =~ ^World ]] || [[ "$country" =~ ^USA ]]
 	then     
-	   cat <<EOF >> /tmp/info_template.html
-	   <tr>
-	   <td>&nbsp;<b>TG ${fields[1]}</b>&nbsp;</td>
-	   <td>&nbsp;<b>D</b>&nbsp;</td>
-	   <td>&nbsp;<b>D | S</b>&nbsp;</td>
-	   <td>&nbsp;<b>$tgname</b>&nbsp;</td>
-	   </tr>
+           if [[ "$tgid" != "" ]]
+           then
+	      cat <<EOF >> /tmp/info_template.html
+	      <tr>
+	      <td>&nbsp;<b>TG $tgid</b>&nbsp;</td>
+	      <td>&nbsp;<b>D</b>&nbsp;</td>
+	      <td>&nbsp;<b>D | S</b>&nbsp;</td>
+	      <td>&nbsp;<b>$tgname</b>&nbsp;</td>
+	      </tr>
 EOF
+           fi
 	fi
 done < ${FILE_NAME}
 
